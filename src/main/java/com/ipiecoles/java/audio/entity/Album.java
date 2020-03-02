@@ -12,7 +12,7 @@ public class Album {
 
     private String title;
 
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "artistId")
     private Artist artistId;
 
